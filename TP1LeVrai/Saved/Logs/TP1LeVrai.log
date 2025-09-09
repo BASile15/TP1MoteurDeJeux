@@ -1359,3 +1359,143 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.09.08-23.55.49:995][992]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
 [2025.09.08-23.55.49:995][992]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
 [2025.09.08-23.55.49:995][992]LogShaderCompilers: Display: ================================================
+[2025.09.08-23.59.29:918][233]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_2
+[2025.09.09-00.00.18:513][335]LogSlate: Window 'Enregistrer le niveau sous' being destroyed
+[2025.09.09-00.00.18:581][335]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Niveau1" FILE="../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Content/Niveau1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.09.09-00.00.18:604][335]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2025.09.09-00.00.18:619][335]LogSavePackage: Moving output files for package: /Game/Niveau1
+[2025.09.09-00.00.18:619][335]LogSavePackage: Moving '../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Saved/Niveau1CF17A8B94ADD77A9842813BE4F9A92AD.tmp' to '../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Content/Niveau1.umap'
+[2025.09.09-00.00.18:631][335]LogFileHelpers: Saving map 'Niveau1' took 0.109
+[2025.09.09-00.00.18:631][335]Cmd: MAP LOAD FILE="../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Content/Niveau1.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.09.09-00.00.18:667][335]LogWorld: UWorld::CleanupWorld for Niveau1, bSessionEnded=true, bCleanupResources=true
+[2025.09.09-00.00.18:667][335]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.09-00.00.18:679][335]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.09.09-00.00.18:679][335]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.09.09-00.00.18:680][335]LogStreaming: Display: FlushAsyncLoading(400): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.09-00.00.18:682][335]LogAudio: Display: Audio Device (ID: 1) registered with world 'Niveau1'.
+[2025.09.09-00.00.18:682][335]LogChaosDD: Creating Chaos Debug Draw Scene for world Niveau1
+[2025.09.09-00.00.18:691][335]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.09.09-00.00.18:703][335]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.09.09-00.00.18:704][335]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.09.09-00.00.18:704][335]MapCheck: Vérification de la carte terminée : 0 Erreur(s), 0 Avertissement(s), a pris 0,039ms pour s'exécuter.
+[2025.09.09-00.00.18:764][335]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.09-00.00.18:764][335]LogContentValidation: Enabled validators:
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.09-00.00.18:764][335]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.09-00.00.18:764][335]AssetCheck: /Game/Niveau1 Validation de la ressource
+[2025.09.09-00.00.18:784][335]LogSourceControl: Display: Uncontrolled Changelist persistency file saved ../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Saved/SourceControl/UncontrolledChangelists.json
+[2025.09.09-00.01.13:110][538]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2025.09.09-00.01.29:582][471]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 703.586304
+[2025.09.09-00.01.29:631][477]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.09-00.01.29:631][477]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 703.627930, Update Interval: 341.637634
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: ================================================
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Total job queries 2 493, among them cache hits 657 (26.35%), DDC hits 1 738 (69.72%), Duplicates 89 (3.57%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Tracking 1 747 distinct input hashes that result in 1 089 distinct outputs (62.34%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: RAM used: 10,90 MiB of 3,20 GiB budget. Usage: 0.33%
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Shaders Compiled: 9
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Jobs assigned 9, completed 9 (100%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Average time worker was idle: 150.42 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.07 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Job execution time: average 0.39 s, max 0.44 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Job life time (pending + execution): average 0.44 s, max 0.51
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Shader code size: total 64,527 KiB, numShaders 9, average 7,169 KiB, min 5,562 KiB, max 8,145 KiB
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 1.86 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.03%
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Jobs were issued in 9 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Average processing rate: 4.84 jobs/sec
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Total thread time: 2,16 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Total thread preprocess time: 26,544 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Percentage time preprocessing: 1229.11%
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Effective parallelization: 1.16 (times faster than compiling all shaders on one thread). Compare with number of workers: 12 - 0.096796
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    5 times, average 0.27 sec, max 0.30 sec, min 0.23 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                                  FHitProxyVS (compiled    1 times, average 0.22 sec, max 0.22 sec, min 0.22 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    3 times, average 0.19 sec, max 0.20 sec, min 0.18 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TVirtualTextureVSWorldHeight (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                    TVirtualTextureVSBaseColorNormalRoughness (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 63.19% of total time (compiled    5 times, average 0.27 sec, max 0.30 sec, min 0.23 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 26.80% of total time (compiled    3 times, average 0.19 sec, max 0.20 sec, min 0.18 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                                  FHitProxyVS - 10.00% of total time (compiled    1 times, average 0.22 sec, max 0.22 sec, min 0.22 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                    TVirtualTextureVSBaseColorNormalRoughness - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display:                                 TVirtualTextureVSWorldHeight - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: === Material stats ===
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Materials Translated:    146
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Material Total Translate Time: 0.10 s
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Material Translation Only: 0.03 s (30%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2025.09.09-00.01.50:018][865]LogShaderCompilers: Display: ================================================
+[2025.09.09-00.03.01:746][299]LogEditor: Attempting to add actor of class 'CineCameraActor' to level at -680.00,-20.00,400.00
+[2025.09.09-00.03.01:760][299]LogStreaming: Display: FlushAsyncLoading(401): 1 QueuedPackages, 0 AsyncPackages
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: ================================================
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Total job queries 2 501, among them cache hits 661 (26.43%), DDC hits 1 741 (69.61%), Duplicates 89 (3.56%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Tracking 1 751 distinct input hashes that result in 1 092 distinct outputs (62.36%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: RAM used: 10,91 MiB of 3,20 GiB budget. Usage: 0.33%
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Shaders Compiled: 10
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Jobs assigned 10, completed 10 (100%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Average time worker was idle: 162.62 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.07 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Job execution time: average 0.39 s, max 0.44 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Job life time (pending + execution): average 0.44 s, max 0.51
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Shader code size: total 72,387 KiB, numShaders 10, average 7,238 KiB, min 5,562 KiB, max 8,145 KiB
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 2.29 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.03%
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Jobs were issued in 10 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Average processing rate: 4.37 jobs/sec
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Total thread time: 2,433 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Total thread preprocess time: 26,613 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Percentage time preprocessing: 1094.05%
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Effective parallelization: 1.06 (times faster than compiling all shaders on one thread). Compare with number of workers: 12 - 0.088489
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    6 times, average 0.27 sec, max 0.30 sec, min 0.23 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                                  FHitProxyVS (compiled    1 times, average 0.22 sec, max 0.22 sec, min 0.22 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    3 times, average 0.19 sec, max 0.20 sec, min 0.18 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TVirtualTextureVSWorldHeight (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                    TVirtualTextureVSBaseColorNormalRoughness (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 67.32% of total time (compiled    6 times, average 0.27 sec, max 0.30 sec, min 0.23 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 23.80% of total time (compiled    3 times, average 0.19 sec, max 0.20 sec, min 0.18 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                                  FHitProxyVS - 8.88% of total time (compiled    1 times, average 0.22 sec, max 0.22 sec, min 0.22 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                    TVirtualTextureVSBaseColorNormalRoughness - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display:                                 TVirtualTextureVSWorldHeight - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: === Material stats ===
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Materials Translated:    147
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Material Total Translate Time: 0.10 s
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Material Translation Only: 0.03 s (30%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+[2025.09.09-00.04.50:022][971]LogShaderCompilers: Display: ================================================
+[2025.09.09-00.05.12:913][696]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cone.Cone
+[2025.09.09-00.05.12:913][696]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Cone.Cone
+[2025.09.09-00.05.12:913][696]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cone.Cone as actor: StaticMeshActor /Game/Niveau1.Niveau1:PersistentLevel.StaticMeshActor_2
+[2025.09.09-00.05.12:915][696]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Cone.Cone as actor: StaticMeshActor /Game/Niveau1.Niveau1:PersistentLevel.StaticMeshActor_2
+[2025.09.09-00.06.35:168][146]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.09-00.06.35:215][146]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Niveau1" FILE="../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Content/Niveau1.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.09.09-00.06.35:261][146]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2025.09.09-00.06.35:275][146]LogSavePackage: Moving output files for package: /Game/Niveau1
+[2025.09.09-00.06.35:275][146]LogSavePackage: Moving '../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Saved/Niveau1495AECC540C732DC48D2239BBF04B8A1.tmp' to '../../../../../../Users/bmonod/MoteursDeJeux/TP1MoteurDeJeux/TP1LeVrai/Content/Niveau1.umap'
+[2025.09.09-00.06.35:279][146]LogFileHelpers: Saving map 'Niveau1' took 0.064
+[2025.09.09-00.06.35:283][146]LogFileHelpers: InternalPromptForCheckoutAndSave took 115.916 ms
+[2025.09.09-00.06.35:329][146]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.09-00.06.35:329][146]LogContentValidation: Enabled validators:
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.09-00.06.35:329][146]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.09-00.06.35:330][146]AssetCheck: /Game/Niveau1 Validation de la ressource
+[2025.09.09-00.07.18:197][230]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1052.193481
+[2025.09.09-00.07.18:249][236]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.09-00.07.18:249][236]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1052.234985, Update Interval: 319.869385
