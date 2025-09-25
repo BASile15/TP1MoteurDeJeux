@@ -27,5 +27,5 @@ public:
 	class UProjectileMovementComponent* ProjectileMovement;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Combat")
-	float Damage = 10.f;
+	float ProjectileDgts = 10.f;
 };
