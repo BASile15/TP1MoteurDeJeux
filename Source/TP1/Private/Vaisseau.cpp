@@ -3,6 +3,9 @@
 #include "Public/Vaisseau.h"
 #include "Projectile.h"
 #include "Engine/World.h"
+#include "Components/BoxComponent.h"
+#include "Asteroide.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -18,7 +21,18 @@ AVaisseau::AVaisseau()
 void AVaisseau::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	// Récupère le BoxCollider créé dans le BP
+	UBoxComponent* BoxCollider = FindComponentByClass<UBoxComponent>();
+	if (BoxCollider)
+	{
+		BoxCollider->OnComponentBeginOverlap.AddDynamic(this, &AVaisseau::OnOverlapBegin);
+		UE_LOG(LogTemp, Warning, TEXT("BoxCollider trouvé et event attaché !"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("BoxCollider NON trouvé !"));
+	}
 }
 
 // Called every frame
@@ -71,5 +85,29 @@ void AVaisseau::Tir()
 		SpawnParams.Instigator = GetInstigator();
 
 		GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+	}
+}
+
+void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+							   UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+							   bool bFromSweep, const FHitResult& SweepResult)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 1 !"));
+	if (OtherActor && OtherActor != this)
+	{
+		AAsteroide* Asteroide = Cast<AAsteroide>(OtherActor);
+		if (Asteroide)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 2 !"));
+			Asteroide->Destroy();
+			
+			Vie--;
+			UE_LOG(LogTemp, Warning, TEXT("Vies restantes : %d"), Vie);
+			if (Vie <= 0)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Game Over !"));
+				UGameplayStatics::OpenLevel(this, FName("GameOver"));
+			}
+		}
 	}
 }
