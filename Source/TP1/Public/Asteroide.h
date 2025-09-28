@@ -24,13 +24,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Speed = 5.f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UProjectileMovementComponent* ProjectileMovement;
 
-	UFUNCTION(BlueprintCallable, Category="Asteroide")
+	UFUNCTION(BlueprintCallable)
 	void InitDirection(const FVector& Direction);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
+	int32 Vie = (rand() % 3) + 1;
 	
 };

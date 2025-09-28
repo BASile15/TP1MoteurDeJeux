@@ -32,7 +32,7 @@ void AAsteroide::Tick(float DeltaTime)
 
 void AAsteroide::InitDirection(const FVector& Direction)
 {
-	UE_LOG(LogTemp, Warning, TEXT("test Init Direction"));
+	
 
 	if (ProjectileMovement)
 	{

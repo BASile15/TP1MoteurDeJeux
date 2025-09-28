@@ -31,7 +31,7 @@ public:
 	TSubclassOf<class AProjectile> ProjectileClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
-	int32 Vie = 3;  // Vies initiales
+	int32 Vie = 3;
 
 private:
 	void MoveForward(float Value);
