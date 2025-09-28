@@ -34,6 +34,6 @@ public:
 	void InitDirection(const FVector& Direction);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
-	int32 Vie = (rand() % 3) + 1;
+	int32 Vie = (rand() % 4) + 1;
 	
 };

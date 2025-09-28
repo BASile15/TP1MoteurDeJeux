@@ -47,7 +47,11 @@ void AProjectile::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 		AAsteroide* Asteroide = Cast<AAsteroide>(OtherActor);
 		if (Asteroide)
 		{
-			Asteroide->Destroy();
+			Asteroide->Vie--;
+			if (Asteroide->Vie<=0)
+			{
+				Asteroide->Destroy();
+			}
 			Destroy();
 		}
 	}
