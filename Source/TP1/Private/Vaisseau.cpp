@@ -5,6 +5,7 @@
 #include "Engine/World.h"
 #include "Components/BoxComponent.h"
 #include "Asteroide.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -94,14 +95,19 @@ void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 	UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 1 !"));
 	if (OtherActor && OtherActor != this)
 	{
-		// Vérifie si l'autre acteur est un astéroïde
 		AAsteroide* Asteroide = Cast<AAsteroide>(OtherActor);
 		if (Asteroide)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 2 !"));
-
-			// Exemple : détruire l'astéroïde
-			// Asteroide->Destroy();
+			Asteroide->Destroy();
+			
+			Vie--;
+			UE_LOG(LogTemp, Warning, TEXT("Vies restantes : %d"), Vie);
+			if (Vie <= 0)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Game Over !"));
+				UGameplayStatics::OpenLevel(this, FName("GameOver"));
+			}
 		}
 	}
 }

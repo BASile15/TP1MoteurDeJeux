@@ -30,6 +30,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Combat")
 	TSubclassOf<class AProjectile> ProjectileClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
+	int32 Vie = 3;  // Vies initiales
+
 private:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
