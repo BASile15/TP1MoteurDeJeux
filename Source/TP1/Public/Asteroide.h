@@ -22,7 +22,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Speed = 5.f;
@@ -33,7 +32,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void InitDirection(const FVector& Direction);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
-	int32 Vie = (rand() % 4) + 1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 PvDebaseAsteroide = (rand() % 4) + 1;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Vie = PvDebaseAsteroide;
 	
 };

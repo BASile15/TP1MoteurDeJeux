@@ -24,14 +24,23 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* ShipMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MoveSpeed = 400.f;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Combat")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	TSubclassOf<class AProjectile> ProjectileClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 Vie = 3;
+	
+	UFUNCTION(BlueprintCallable)
+	float GetPtsDeVie() const;
+	
+	UFUNCTION(BlueprintCallable)
+	float GetScore() const;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int Score;
 
 private:
 	void MoveForward(float Value);
@@ -46,10 +55,8 @@ private:
 	void Tir();
 
 	UFUNCTION()
-	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-						UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
-						bool bFromSweep, const FHitResult& SweepResult);
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
-	
-	
+	UFUNCTION(BlueprintCallable, Category="Gameplay")
+	void AjouterScore(int nbpoints);
 };

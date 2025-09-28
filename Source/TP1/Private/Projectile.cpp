@@ -2,9 +2,11 @@
 
 #include "Projectile.h"
 #include "Asteroide.h"
+#include "Vaisseau.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 
 AProjectile::AProjectile()
@@ -50,6 +52,11 @@ void AProjectile::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 			Asteroide->Vie--;
 			if (Asteroide->Vie<=0)
 			{
+				AVaisseau* Vaisseau = Cast<AVaisseau>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
+				if (Vaisseau)
+				{
+					Vaisseau->Score += Asteroide->PvDebaseAsteroide*50;
+				}
 				Asteroide->Destroy();
 			}
 			Destroy();

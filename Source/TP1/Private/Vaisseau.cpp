@@ -15,6 +15,8 @@ AVaisseau::AVaisseau()
 
 	ShipMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	RootComponent = ShipMesh;
+
+	Score = 0;
 }
 
 // Called when the game starts or when spawned
@@ -96,6 +98,19 @@ void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 	}
 }
 
+float AVaisseau::GetPtsDeVie() const
+{
+	return (float)Vie / (float)3;
+}
 
+void AVaisseau::AjouterScore(int nbpoints)
+{
+	Score += nbpoints;
+}
+
+float AVaisseau::GetScore() const
+{
+	return Score;
+}
 
 
