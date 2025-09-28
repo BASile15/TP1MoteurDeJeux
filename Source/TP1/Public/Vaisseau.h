@@ -42,6 +42,11 @@ private:
 	UFUNCTION(BlueprintCallable)
 	void Tir();
 
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+						UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+						bool bFromSweep, const FHitResult& SweepResult);
+
 	
 	
 };

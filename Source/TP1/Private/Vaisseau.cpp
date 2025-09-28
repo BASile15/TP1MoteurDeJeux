@@ -3,6 +3,8 @@
 #include "Public/Vaisseau.h"
 #include "Projectile.h"
 #include "Engine/World.h"
+#include "Components/BoxComponent.h"
+#include "Asteroide.h"
 
 
 // Sets default values
@@ -18,7 +20,18 @@ AVaisseau::AVaisseau()
 void AVaisseau::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	// Récupère le BoxCollider créé dans le BP
+	UBoxComponent* BoxCollider = FindComponentByClass<UBoxComponent>();
+	if (BoxCollider)
+	{
+		BoxCollider->OnComponentBeginOverlap.AddDynamic(this, &AVaisseau::OnOverlapBegin);
+		UE_LOG(LogTemp, Warning, TEXT("BoxCollider trouvé et event attaché !"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("BoxCollider NON trouvé !"));
+	}
 }
 
 // Called every frame
@@ -71,5 +84,24 @@ void AVaisseau::Tir()
 		SpawnParams.Instigator = GetInstigator();
 
 		GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+	}
+}
+
+void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+							   UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
+							   bool bFromSweep, const FHitResult& SweepResult)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 1 !"));
+	if (OtherActor && OtherActor != this)
+	{
+		// Vérifie si l'autre acteur est un astéroïde
+		AAsteroide* Asteroide = Cast<AAsteroide>(OtherActor);
+		if (Asteroide)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 2 !"));
+
+			// Exemple : détruire l'astéroïde
+			// Asteroide->Destroy();
+		}
 	}
 }
