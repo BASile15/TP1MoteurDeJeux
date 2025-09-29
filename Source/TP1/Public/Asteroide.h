@@ -22,15 +22,20 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Speed = 5.f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UProjectileMovementComponent* ProjectileMovement;
 
-	UFUNCTION(BlueprintCallable, Category="Asteroide")
+	UFUNCTION(BlueprintCallable)
 	void InitDirection(const FVector& Direction);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 PvDebaseAsteroide = (rand() % 4) + 1;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Vie = PvDebaseAsteroide;
 	
 };

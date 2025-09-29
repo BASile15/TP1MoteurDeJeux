@@ -15,23 +15,18 @@ AVaisseau::AVaisseau()
 
 	ShipMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	RootComponent = ShipMesh;
+
+	Score = 0;
 }
 
 // Called when the game starts or when spawned
 void AVaisseau::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// Récupère le BoxCollider créé dans le BP
 	UBoxComponent* BoxCollider = FindComponentByClass<UBoxComponent>();
 	if (BoxCollider)
 	{
 		BoxCollider->OnComponentBeginOverlap.AddDynamic(this, &AVaisseau::OnOverlapBegin);
-		UE_LOG(LogTemp, Warning, TEXT("BoxCollider trouvé et event attaché !"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("BoxCollider NON trouvé !"));
 	}
 }
 
@@ -73,8 +68,6 @@ void AVaisseau::MoveRight(float Value)
 
 void AVaisseau::Tir()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Test Tir"));
-
 	if (ProjectileClass)
 	{
 		FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 100.f;
@@ -88,26 +81,34 @@ void AVaisseau::Tir()
 	}
 }
 
-void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
-							   UPrimitiveComponent* OtherComp, int32 OtherBodyIndex,
-							   bool bFromSweep, const FHitResult& SweepResult)
+void AVaisseau::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 1 !"));
 	if (OtherActor && OtherActor != this)
 	{
 		AAsteroide* Asteroide = Cast<AAsteroide>(OtherActor);
 		if (Asteroide)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Collision avec un astéroïde 2 !"));
 			Asteroide->Destroy();
-			
 			Vie--;
-			UE_LOG(LogTemp, Warning, TEXT("Vies restantes : %d"), Vie);
 			if (Vie <= 0)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Game Over !"));
 				UGameplayStatics::OpenLevel(this, FName("GameOver"));
 			}
 		}
 	}
+}
+
+float AVaisseau::GetPtsDeVie() const
+{
+	return (float)Vie / (float)3;
+}
+
+float AVaisseau::GetScore() const
+{
+	return Score;
+}
+
+void AVaisseau::AjouterScore(int nbpoints)
+{
+	Score += nbpoints;
 }

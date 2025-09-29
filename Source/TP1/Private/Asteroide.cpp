@@ -32,13 +32,9 @@ void AAsteroide::Tick(float DeltaTime)
 
 void AAsteroide::InitDirection(const FVector& Direction)
 {
-	UE_LOG(LogTemp, Warning, TEXT("test Init Direction"));
-
 	if (ProjectileMovement)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("ProjectileMovement OK"));
 		ProjectileMovement->Velocity = Direction * Speed;
 		ProjectileMovement->Activate();
-		UE_LOG(LogTemp, Warning, TEXT("Asteroide velocity set to %s"), *ProjectileMovement->Velocity.ToString());
 	}
 }

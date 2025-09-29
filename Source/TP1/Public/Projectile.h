@@ -20,12 +20,16 @@ protected:
 public:	
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UStaticMeshComponent* MeshComp;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class UProjectileMovementComponent* ProjectileMovement;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Combat")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	float ProjectileDgts = 10.f;
+
+private:
+	UFUNCTION()
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 };
